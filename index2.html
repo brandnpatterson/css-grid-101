@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-auto-rows: minmax(100px, auto);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .wrapper > div {
+        background: lightgray;
+        padding: 1em;
+      }
+
+      .wrapper > div:nth-child(odd) {
+        background: #ddd;
+      }
+
+      .nested {
+        display: grid;
+        grid-gap: 0.5em;
+      }
+
+      .nested > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f4f4f4;
+        border: 1px solid #eee;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+        velit optio quas obcaecati vel fuga? Repudiandae quaerat tempora minus
+        aliquid placeat, ducimus consequatur, sapiente molestiae natus alias
+        quis voluptas libero ex ab cumque! Expedita at porro dolorum officiis
+        ullam dolore odit voluptatem quo nobis, doloribus, unde quisquam
+        recusandae reprehenderit. Facere!
+      </div>
+      <div class="nested">
+        <div>🍔</div>
+        <div>🌭</div>
+        <div>🍕</div>
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+    </div>
+  </body>
+</html>
